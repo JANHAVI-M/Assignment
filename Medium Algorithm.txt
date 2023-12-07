@@ -1,0 +1,41 @@
+#ALGORITHM
+Step 1:Initialize two variables candidate1 and candidate2 to None and their corresponding counters count1 and count2 to 0.
+
+Step 2:Phase 1 - Find Potential Candidates:
+
+Iterate through the array nums.
+For each element num:
+If num is equal to candidate1, increment count1.
+If num is equal to candidate2, increment count2.
+If count1 is 0, set candidate1 to num and increment count1 to 1.
+If count2 is 0, set candidate2 to num and increment count2 to 1.
+If none of the above conditions is met, decrement count1 and count2.
+
+Step 3:Phase 2 - Verify Candidates:
+
+Reset count1 and count2 to 0.
+Iterate through the array nums again.
+Count the occurrences of candidate1 and candidate2.
+
+Step 4:Based on the counts obtained in Phase 2, add the candidates to the result list if their counts are greater than [ n/3 ].
+
+Return the result list
+
+#LOGIC
+Initialize two candidates (candidate1 and candidate2) to None and their corresponding counters (count1 and count2) to 0.
+Iterate through the array nums.
+For each element num:
+If num is equal to candidate1, increment count1.
+If num is equal to candidate2, increment count2.
+If count1 is 0, set candidate1 to num and increment count1 to 1.
+If count2 is 0, set candidate2 to num and increment count2 to 1.
+If none of the above conditions is met, decrement count1 and count2.
+Reset count1 and count2 to 0.
+Iterate through the array nums again.
+Count the occurrences of candidate1 and candidate2.
+The time complexity is O(n), and the space complexity is O(1).
+
+
+
+
+
