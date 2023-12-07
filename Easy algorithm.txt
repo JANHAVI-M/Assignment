@@ -1,0 +1,65 @@
+#ALGORITHM
+Step 1:Define the TreeNode class:
+
+The TreeNode class represents a node in a binary tree.
+Each node has a value (val), a reference to the left child (left), and a reference to the right child (right).
+
+Step 2:Write the function sortedArrayToBST:
+
+This function takes a sorted array nums as input and returns the root of a height-balanced binary search tree.
+The base case is when the array is empty (not nums), in which case it returns None.
+Find the middle index of the array (mid = len(nums) // 2).
+Create a TreeNode with the value at the middle index as the root.
+Recursively call sortedArrayToBST on the left and right halves of the array to build the left and right subtrees.
+Return the root node.
+
+Step 3:Write the function inorderTraversal:
+
+This function performs an inorder traversal of a binary tree and returns the result as a list.
+Base case: If the node is None, return an empty list.
+Recursively traverse the left subtree, visit the current node, and then recursively traverse the right subtree.
+Return the concatenated lists of the left subtree, current node value, and right subtree.
+
+Step 4:Example Usage:
+
+Create sorted arrays (nums1 and nums2).
+Call sortedArrayToBST on each array to obtain the root of the corresponding height-balanced BST.
+Call inorderTraversal on each resulting tree to obtain the inorder traversal.
+
+Step 5:Print the Results:
+
+Print the inorder traversal lists for both examples
+
+#LOGIC
+TreeNode Class
+This class is a basic representation of a node in a binary tree.
+Each node has a value (val) and two pointers to its left and right children.
+sortedArrayToBST Function
+Base Case:
+
+If the input array nums is empty, return None as there's no tree to construct.
+Find the Middle Index:
+
+Calculate the middle index of the array using mid = len(nums) // 2.
+Create Root Node:
+
+Create a TreeNode with the value at the middle index as the root.
+Recursion for Left and Right Subtrees:
+
+Recursively call sortedArrayToBST on the left half of the array to construct the left subtree.
+Recursively call sortedArrayToBST on the right half of the array to construct the right subtree.
+Return Root Node:
+
+Return the root node of the constructed tree.
+inorderTraversal Function
+Base Case:
+
+If the current node is None, return an empty list.
+Inorder Traversal:
+
+Recursively traverse the left subtree.
+Append the value of the current node to the result list.
+Recursively traverse the right subtree.
+Return Result:
+
+Return the list containing the inorder traversal of the tree.
