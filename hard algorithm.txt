@@ -1,0 +1,24 @@
+#ALGORITHM
+
+
+Step 1:Concatenate the given string s with a special character (not present in s, such as #) and its reverse.
+Step2:Build KMP Table:
+Initialize an array table of length len(new_str) with zeros.
+Initialize a variable j to 0.
+Iterate over the characters of new_str starting from index 1.
+Use a while loop to update j based on the KMP algorithm.
+If characters at indices i and j are equal, increment j.
+Update the KMP table value at index i.
+Step3:Find Palindrome Length:
+Find the length of the longest prefix that matches a suffix in new_str
+Step4:Construct Shortest Palindrome:
+Prepend the remaining characters of the reversed string to the original string to make it a palindrome.
+Step5:Return Result:
+Return the constructed palindrome.
+
+
+#LOGIC 
+
+The logic for finding the shortest palindrome using the K pattern matching algorithm involves building a table based on the KMP algorithm 
+and then utilizing it to identify the longest prefix that matches a suffix. 
+And then logic follows as same as the algorithm 
